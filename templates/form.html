@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Similarity Checker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Text Similarity Checker</h1>
+        <form method="post">
+            <div class="text-area">
+                <label for="text1">Text 1:</label>
+                <textarea id="text1" name="text1" rows="4" cols="50">{{text1}}</textarea>
+            </div>
+            <div class="text-area">
+                <label for="text2">Text 2:</label>
+                <textarea id="text2" name="text2" rows="4" cols="50">{{text2}}</textarea>
+            </div>
+            <input type="submit" value="Calculate Similarity">
+            {% if similarity_score is not none %}
+            <p>Similarity Score: {{ similarity_score }}</p>
+            {% endif %}
+        </form>
+    </div>
+</body>
+</html>
