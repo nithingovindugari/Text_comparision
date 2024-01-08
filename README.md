@@ -49,7 +49,7 @@ The application features a simple yet functional web interface where users can:
 # Sample Output
 ![Sample Output](image.png)
 
-![Sample Output](image1.png)
+![Sample Output](image-1.png)
 
 
 ## Contributing
